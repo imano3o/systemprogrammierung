@@ -12,12 +12,15 @@ public class ErhoehenThread extends Thread {
         int wert = hilfszahl.getWert();
         System.out.println(getName() + ": alter Wert: " + wert);
         int erhoeterWert = wert + 1;
-        hilfszahl.setWert(erhoeterWert);
-        System.out.println(getName() + ": neuer Wert: " +  hilfszahl.getWert());
+
         try {
             sleep(100);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+        hilfszahl.setWert(erhoeterWert);
+        System.out.println(getName() + ": neuer Wert: " + hilfszahl.getWert());
+
     }
 }
