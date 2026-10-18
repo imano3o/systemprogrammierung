@@ -1,6 +1,6 @@
-package uebung1;
+package uebung1.teilaufgabe3;
 
-public class Hilfszahl {
+public class HilfszahlSemaphore {
     private int wert = 0;
 
     public int getWert() {

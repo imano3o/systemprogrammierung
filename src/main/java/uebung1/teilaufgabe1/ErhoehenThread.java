@@ -1,4 +1,4 @@
-package uebung1;
+package uebung1.teilaufgabe1;
 
 public class ErhoehenThread extends Thread {
     private Hilfszahl hilfszahl;
@@ -16,7 +16,7 @@ public class ErhoehenThread extends Thread {
         try {
             sleep(100);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println(getName() + ": sleep interrupted");
         }
 
         hilfszahl.setWert(erhoeterWert);
