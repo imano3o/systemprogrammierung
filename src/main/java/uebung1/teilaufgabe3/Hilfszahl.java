@@ -1,6 +1,6 @@
 package uebung1.teilaufgabe3;
 
-public class HilfszahlSemaphore {
+public class Hilfszahl {
     private int wert = 0;
 
     public int getWert() {

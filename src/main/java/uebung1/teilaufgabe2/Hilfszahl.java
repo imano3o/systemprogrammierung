@@ -1,6 +1,6 @@
 package uebung1.teilaufgabe2;
 
-public class HilfszahlSynchronized {
+public class Hilfszahl {
     private int wert = 0;
 
     public int getWert() {

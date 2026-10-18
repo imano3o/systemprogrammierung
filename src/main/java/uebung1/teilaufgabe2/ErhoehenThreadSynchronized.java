@@ -1,11 +1,9 @@
 package uebung1.teilaufgabe2;
 
-import uebung1.teilaufgabe1.Hilfszahl;
-
 public class ErhoehenThreadSynchronized extends Thread {
-    HilfszahlSynchronized hilfszahl;
+    Hilfszahl hilfszahl;
 
-    public ErhoehenThreadSynchronized(String name, HilfszahlSynchronized hilfszahl ) {
+    public ErhoehenThreadSynchronized(String name, Hilfszahl hilfszahl ) {
         super(name);
         this.hilfszahl = hilfszahl;
         // TODO: start in main methode oder konstruktor?
