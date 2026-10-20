@@ -9,7 +9,7 @@ public class ThreadClass extends Thread {
     }
 
     @Override
-    public void run(){
+    public void run() {
         hilfszahl.increment();
     }
 }

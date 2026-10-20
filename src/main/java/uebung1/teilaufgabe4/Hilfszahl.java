@@ -2,7 +2,6 @@ package uebung1.teilaufgabe4;
 
 import java.lang.Thread;
 
-import static java.lang.Character.getName;
 import static java.lang.Thread.sleep;
 
 public class Hilfszahl {
