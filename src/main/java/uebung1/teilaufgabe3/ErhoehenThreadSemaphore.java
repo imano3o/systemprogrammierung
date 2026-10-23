@@ -9,7 +9,6 @@ public class ErhoehenThreadSemaphore extends Thread {
     public ErhoehenThreadSemaphore(String name, Hilfszahl hilfszahl) {
         super(name);
         this.hilfszahl = hilfszahl;
-        start();
     }
 
     public void run() {

@@ -8,5 +8,8 @@ public class Main {
         ErhoehenThreadSemaphore thread2 = new ErhoehenThreadSemaphore("2. Thread", hilfszahl);
         ErhoehenThreadSemaphore thread3 = new ErhoehenThreadSemaphore("3. Thread", hilfszahl);
 
+        thread1.start();
+        thread2.start();
+        thread3.start();
     }
 }
