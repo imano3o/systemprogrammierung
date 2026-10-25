@@ -6,8 +6,6 @@ public class ErhoehenThreadSynchronized extends Thread {
     public ErhoehenThreadSynchronized(String name, Hilfszahl hilfszahl ) {
         super(name);
         this.hilfszahl = hilfszahl;
-        // TODO: start in main methode oder konstruktor?
-        start();
     }
 
     public void run() {

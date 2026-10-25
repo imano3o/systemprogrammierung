@@ -8,5 +8,9 @@ public class Main {
         ErhoehenThreadSynchronized thread1 = new ErhoehenThreadSynchronized("1. Thread", hilfszahl);
         ErhoehenThreadSynchronized thread2 = new ErhoehenThreadSynchronized("2. Thread", hilfszahl);
         ErhoehenThreadSynchronized thread3 = new ErhoehenThreadSynchronized("3. Thread", hilfszahl);
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
     }
 }
