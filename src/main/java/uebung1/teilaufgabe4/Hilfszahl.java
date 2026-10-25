@@ -19,15 +19,15 @@ public class Hilfszahl {
         int wert = getWert();
         System.out.println(Thread.currentThread().getName() + ": alter Wert: " + wert);
         int erhoeterWert = wert + 1;
-        setWert(erhoeterWert);
-        System.out.println(Thread.currentThread().getName() + ": neuer Wert: " + getWert());
+
         try {
             sleep(100);
         } catch (InterruptedException e) {
             System.out.println(Thread.currentThread().getName() + ": sleep interrupted");
         }
 
-
+        setWert(erhoeterWert);
+        System.out.println(Thread.currentThread().getName() + ": neuer Wert: " + getWert());
     }
 }
 
