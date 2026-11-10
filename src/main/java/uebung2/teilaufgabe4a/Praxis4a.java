@@ -9,14 +9,15 @@ public class Praxis4a {
     public Praxis4a(int anzahlRaeume) {
         behandlungsraeume = new Behandlungsraum[anzahlRaeume];
         for (int i = 0; i < anzahlRaeume; i++) {
-            behandlungsraeume[i] = new Behandlungsraum();
+            behandlungsraeume[i] = new Behandlungsraum(i + 1);
         }
     }
 
     public void patientBehandeln(Patient p) {
-        // TODO p.getBehandlungsraum() oder p.getBehandlungsraum() - 1?
-        Behandlungsraum raum = behandlungsraeume[p.getBehandlungsraum()];
+        Behandlungsraum raum = behandlungsraeume[p.getBehandlungsraum() - 1];
         raum.vormerkenPatient(p);
-        raum.startBehandlung(p);
+        synchronized (raum) {
+            raum.startBehandlung(p);
+        }
     }
 }

@@ -7,11 +7,17 @@ import java.util.concurrent.Semaphore;
 import static java.lang.Thread.sleep;
 
 public class Behandlungsraum4c {
-    private final Semaphore semaphore = new Semaphore(1);
+    private int raumNummer;
+
+    public Behandlungsraum4c(int raumNummer) {
+        this.raumNummer = raumNummer;
+    }
+
+    private Semaphore semaphore = new Semaphore(1);
 
     public void vormerkenPatient(Patient patient) {
         patient.setAufnahmezeitpunkt(System.currentTimeMillis());
-        System.out.println(patient.getName() + " Wartet auf Behandlung in Zimmer " + patient.getBehandlungsraum());
+        System.out.println(patient.getName() + " wartet auf Behandlung in Zimmer " + raumNummer);
     }
 
     public void starteBehandlung(Patient patient) {
@@ -35,5 +41,8 @@ public class Behandlungsraum4c {
         } finally {
             semaphore.release(); // V: Verlassen der kritischen Region (Raum freigeben)
         }
+        System.out.println("Behandlung von " + patient.getName() + " in Zimmer " + patient.getBehandlungsraum()
+                + " gestartet. Behandlungszeit: " + (patient.getBehandlungsdauer() / 1000) + " Sekunden");
+        System.out.println("Patient " + patient.getName() + " hatte eine Wartezeit von " + patient.getWartezeit() + " Sekunden.");
     }
 }
