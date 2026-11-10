@@ -1,17 +1,19 @@
-package uebung2;
+package uebung2.teilaufgabe4c;
+
+import uebung2.Patient;
 
 public class Praxis4c {
-    private Behandlungsraum[] behandlungsraeume;
+    private Behandlungsraum4c[] behandlungsraeume;
 
     public Praxis4c(int anzahlRaeume) {
-        behandlungsraeume = new Behandlungsraum[anzahlRaeume];
+        behandlungsraeume = new Behandlungsraum4c[anzahlRaeume];
         for (int i = 0; i < anzahlRaeume; i++) {
-            behandlungsraeume[i] = new Behandlungsraum(i+1);
+            behandlungsraeume[i] = new Behandlungsraum4c(i + 1);
         }
     }
 
     public void patientBehandeln(Patient p) {
-        Behandlungsraum raum = behandlungsraeume[p.getBehandlungsraum()-1];
+        Behandlungsraum4c raum = behandlungsraeume[p.getBehandlungsraum() - 1];
         raum.vormerkenPatient(p);
         raum.startBehandlung(p);
     }
