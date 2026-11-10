@@ -2,9 +2,13 @@ package uebung2.teilaufgabe4c;
 
 import uebung2.Patient;
 
+import java.util.concurrent.Semaphore;
+
 import static java.lang.Thread.sleep;
 
 public class Behandlungsraum4c {
+    private Semaphore semaphore = new Semaphore(1);
+
     public void vormerkenPatient(Patient patient) {
         patient.setAufnahmezeitpunkt(System.currentTimeMillis());
         System.out.println(patient.getName() + " wartet auf Behandlung in Zimmer " + patient.getBehandlungsraum());
