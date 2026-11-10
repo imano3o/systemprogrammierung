@@ -30,19 +30,16 @@ public class Behandlungsraum4c {
 
         try {
             patient.setBehandlungsstart(System.currentTimeMillis());
-            System.out.println("Behandlung von " + patient.getName() + " in Zimmer " + patient.getBehandlungsraum()
-                    + " gestartet Behandlungszeit " + (patient.getBehandlungsdauer() / 1000) + " Sekunden");
+            System.out.println("Behandlung von " + patient.getName() + " in Zimmer " + raumNummer
+                    + " gestartet. Behandlungszeit: " + (patient.getBehandlungsdauer() / 1000) + " Sekunden");
             try {
                 sleep(patient.getBehandlungsdauer()); // Behandlung simulieren
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("Patient " + patient.getName() + " hatte eine Wartezeit von " + patient.getWartezeit() + " Sekunden");
+            System.out.println("Patient " + patient.getName() + " hatte eine Wartezeit von " + patient.getWartezeit() + " Sekunden.");
         } finally {
             semaphore.release(); // V: Verlassen der kritischen Region (Raum freigeben)
         }
-        System.out.println("Behandlung von " + patient.getName() + " in Zimmer " + patient.getBehandlungsraum()
-                + " gestartet. Behandlungszeit: " + (patient.getBehandlungsdauer() / 1000) + " Sekunden");
-        System.out.println("Patient " + patient.getName() + " hatte eine Wartezeit von " + patient.getWartezeit() + " Sekunden.");
     }
 }
