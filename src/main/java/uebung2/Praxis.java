@@ -13,6 +13,6 @@ public class Praxis {
     public void patientBehandeln(Patient p) {
         Behandlungsraum raum = behandlungsraeume[p.getBehandlungsraum()-1];
         raum.vormerkenPatient(p);
-        raum.startBehandlung(p);
+        raum.starteBehandlung(p);
     }
 }

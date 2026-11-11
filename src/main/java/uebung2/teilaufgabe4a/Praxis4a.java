@@ -17,7 +17,7 @@ public class Praxis4a {
         Behandlungsraum raum = behandlungsraeume[p.getBehandlungsraum() - 1];
         raum.vormerkenPatient(p);
         synchronized (raum) {
-            raum.startBehandlung(p);
+            raum.starteBehandlung(p);
         }
     }
 }

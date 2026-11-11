@@ -14,7 +14,7 @@ public class Behandlungsraum {
         System.out.println(patient.getName() + " wartet auf Behandlung in Zimmer " + raumNummer);
     }
 
-    public void startBehandlung(Patient patient) {
+    public void starteBehandlung(Patient patient) {
         patient.setBehandlungsstart(System.currentTimeMillis());
         System.out.println("Behandlung von " + patient.getName() + " in Zimmer " + raumNummer
                 + " gestartet. Behandlungszeit: " + (patient.getBehandlungsdauer() / 1000) + " Sekunden");

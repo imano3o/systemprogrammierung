@@ -20,7 +20,7 @@ public class Behandlungsraum4c {
         System.out.println(patient.getName() + " wartet auf Behandlung in Zimmer " + raumNummer);
     }
 
-    public void startBehandlung(Patient patient) {
+    public void starteBehandlung(Patient patient) {
         try {
             semaphore.acquire(); // P: Eintritt in die kritische Region (Raum belegen)
         } catch (InterruptedException e) {
